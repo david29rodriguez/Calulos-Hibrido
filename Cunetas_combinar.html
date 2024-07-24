@@ -23,8 +23,8 @@
         </nav>
     </header>
 
-    <main class="contenedor-card">
-       <!-- Tarjeta 1 -->
+  <div class="contenedor-card">
+    <!-- Tarjeta 1 -->
     <div class="contenedor-card-1">
         <div class="card">
             <h2>Cuentas a combinar</h2>
@@ -56,16 +56,16 @@
                 <label for="campo1-7">Garantía Ahorros Navideños:</label>
                 <input type="number" step="0.001" id="campo1-7" name="campo1-7" oninput="Calcular()"required>
             </div>
-        
                 <p id="campo1-8"></p>
-            
-        </div>
+            </div>
          <div class="form-container">
            <button onclick="limpiarCampos()">Limpiar Campos</button>
         </div>
     </div>
-        <!-- Tarjeta 7 -->
-        <section class="contenedor-card-1">
+
+    <!-- Tarjeta 2 -->
+
+            <div class="contenedor-card-1">
             <div class="card">
                 <h2>Tasa Anual</h2>
                 <div class="input-group">
@@ -97,82 +97,82 @@
                     <input type="number" step="0.001" id="campo7-7" name="garantia_ahorros_navidenos_2" oninput="Calcular()" required>
                 </div>
             </div>
-        </section>
-         <!-- Tarjeta 2 -->
-        <section class="contenedor-card-2">
-            <div class="card">
-                <h2>Cálculo de Tasa Combinada</h2>
-                <div class="input-group">
-                    <label for="campo2-1">Aportaciones</label>
-                    <input type="text" id="campo2-1" name="aportaciones_calculadas" readonly>
-                </div>
-                <div class="input-group">
-                    <label for="campo2-2">Certificado 1</label>
-                    <input type="text" id="campo2-2" name="certificado_1_calculado" readonly>
-                </div>
-                <div class="input-group">
-                    <label for="campo2-3">Certificado 2</label>
-                    <input type="text" id="campo2-3" name="certificado_2_calculado" readonly>
-                </div>
-                <div class="input-group">
-                    <label for="campo2-4">Ahorros</label>
-                    <input type="text" id="campo2-4" name="ahorros_calculados" readonly>
-                </div>
-                <div class="input-group">
-                    <label for="campo2-5">Cosecha de Oro</label>
-                    <input type="text" id="campo2-5" name="cosecha_oro_calculada" readonly>
-                </div>
-                <div class="input-group">
-                    <label for="campo2-6">Ahorros Vacaciones</label>
-                    <input type="text" id="campo2-6" name="ahorros_vacaciones_calculados" readonly>
-                </div>
-                <div class="input-group">
-                    <label for="campo2-7">Ahorros Navideños</label>
-                    <input type="text" id="campo2-7" name="ahorros_navidenos_calculados" readonly>
-                </div>
-            </div>
-        </section>
+        </div>
 
-        <!-- Tarjeta 8 -->
-        <section class="contenedor-card-1">
+       <!-- Tarjeta 3-->
+
+
+    <div class="contenedor-card-2">
+        <div class="card">
+            <h2>Calculo de Tasa Combinada</h2>
+            <div class="input-group">
+                <label for="campo2-1">Aportaciones</label>
+                <input type="text" step="0.001" id="campo2-1" name="campo2-1" readonly>
+            </div>
+            <div class="input-group">
+                <label for="campo2-2">Certificado 1</label>
+                <input type="text" step="0.001" id="campo2-2" name="campo2-2" oninput="Calcular()"readonly>
+            </div>
+            <div class="input-group">
+                <label for="campo2-3">Certificado 2</label>
+                <input type="text" step="0.001" id="campo2-3" name="campo2-3" oninput="Calcular()"readonly>
+            </div>
+            <div class="input-group">
+                <label for="campo2-4">Ahorros</label>
+                <input type="text" step="0.001" id="campo2-4" name="campo2-4" oninput="Calcular()"readonly>
+            </div>
+            <div class="input-group">
+                <label for="campo2-5">Garantía de Cosecha de Oro</label>
+                <input type="text" step="0.001" id="campo2-5" name="campo2-5" oninput="Calcular()"readonly>
+            </div>
+            <div class="input-group">
+                <label for="campo2-6">Ahorros Vacaciones</label>
+                <input type="text" step="0.001" id="campo2-6" name="campo2-6" oninput="Calcular()"readonly>
+            </div>
+            <div class="input-group">
+                <label for="campo2-7">Ahorros Navideños</label>
+                <input type="text" step="0.001" id="campo2-7" name="campo2-7" oninput="Calcular()"readonly>
+            </div>
+        </div>
+   </div>
+     
+ <!-- Tarjeta 4 -->
+        <div class="contenedor-card-1">
             <div class="card">
                 <h2>Tasa combinada anual</h2>
                 <div class="input-group">
                     <label for="campo8-1">Aportaciones:</label>
-                    <input type="text" step="0.001" id="campo8-1" name="aportaciones_combinadas" oninput="Calcular()" required>
+                    <input type="text" step="0.001" id="campo8-1" name="aportaciones_combinadas" oninput="Calcular()" readonly>
                 </div>
                 <div class="input-group">
                     <label for="campo8-2">Certificado 1:</label>
-                    <input type="text" step="0.001" id="campo8-2" name="certificado_1_combinado" oninput="Calcular()" required>
+                    <input type="text" step="0.001" id="campo8-2" name="certificado_1_combinado" oninput="Calcular()" readonly>
                 </div>
                 <div class="input-group">
                     <label for="campo8-3">Certificado 2:</label>
-                    <input type="number" step="0.001" id="campo8-3" name="certificado_2_combinado" oninput="Calcular()" required>
+                    <input type="text" step="0.001" id="campo8-3" name="certificado_2_combinado" oninput="Calcular()" readonly>
                 </div>
                 <div class="input-group">
                     <label for="campo8-4">Ahorros:</label>
-                    <input type="text" step="0.001" id="campo8-4" name="ahorros_combinados" oninput="Calcular()" required>
+                    <input type="text" step="0.001" id="campo8-4" name="ahorros_combinados" oninput="Calcular()" readonly>
                 </div>
                 <div class="input-group">
                     <label for="campo8-5">Cosecha de oro:</label>
-                    <input type="text" step="0.001" id="campo8-5" name="cosecha_oro_combinada" oninput="Calcular()" required>
+                    <input type="text" step="0.001" id="campo8-5" name="cosecha_oro_combinada" oninput="Calcular()" readonly>
                 </div>
                 <div class="input-group">
                     <label for="campo8-6">Ahorros vacaciones:</label>
-                    <input type="text" step="0.001" id="campo8-6" name="ahorros_vacaciones_combinados" oninput="Calcular()" required>
+                    <input type="text" step="0.001" id="campo8-6" name="ahorros_vacaciones_combinados" oninput="Calcular()" readonly>
                 </div>
                 <div class="input-group">
                     <label for="campo8-7">Ahorros navideños:</label>
-                    <input type="text" step="0.001" id="campo8-7" name="ahorros_navidenos_combinados" oninput="Calcular()" required>
+                    <input type="text" step="0.001" id="campo8-7" name="ahorros_navidenos_combinados" oninput="Calcular()" readonly>
                 </div>
-                 <div class="input-group">
-                    <label for="campo8-8">Tasa de Préstamo</label>
-                    <input class="input-group-total" type="text" id="campo8-8" name="tasa_prestamo_calculada" readonly>
-                </div>
+                <p id="campo8-8"></p>
             </div>
-        </section>
-    </main>
-
+        </div>
+    </div>
+ </div>
     <footer>
         <div class="footer-content">
             <p>© 2024 Cooperativa San Jose | Todos los derechos reservados.</p>
