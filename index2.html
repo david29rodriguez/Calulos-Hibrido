@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo hibrido</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Kosugi+Maru&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+     <header>
+        <img  src="Coop-San.webp" alt="Logo">
+        
+        <nav>
+            <ul>
+
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Cunetas_combinar.html">Cuntas a combinar</a></li>
+                <li><a href="Monto_pignorar.html">Monto a pignorar</a></li>
+                <li><a href="plazofijo.html">Plazos fijos a combinar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<div class="contenedor-card">
+    <!-- Tarjeta 1 -->
+    <div class="contenedor-card-1">
+        <div class="card">
+            <h2>Cuentas a combinar</h2>
+            <div class="input-group">
+                <label for="campo1-1">Garantía Aportaciones:</label>
+                <input type="number" step="0.001" id="campo1-1" name="campo1-1" oninput="Calcular()" required>
+            </div>
+            <div class="input-group">
+                <label for="campo1-2">Garantía de Certificado 1:</label>
+                <input type="number" step="0.001" id="campo1-2" name="campo1-2" oninput="Calcular()"required>
+            </div>
+            <div class="input-group">
+                <label for="campo1-3">Garantía de Certificado 2:</label>
+                <input type="number" step="0.001" id="campo1-3" name="campo1-3" oninput="Calcular()"required>
+            </div>
+            <div class="input-group">
+                <label for="campo1-4">Garantía de Ahorros:</label>
+                <input type="number" step="0.001" id="campo1-4" name="campo1-4" oninput="Calcular()"required>
+            </div>
+            <div class="input-group">
+                <label for="campo1-5">Garantía de Cosecha de Oro:</label>
+                <input type="number" step="0.001" id="campo1-5" name="campo1-5" oninput="Calcular()"required>
+            </div>
+            <div class="input-group">
+                <label for="campo1-6">Garantía Ahorros Vacaciones:</label>
+                <input type="number" step="0.001" id="campo1-6" name="campo1-6" oninput="Calcular()"required>
+            </div>
+            <div class="input-group">
+                <label for="campo1-7">Garantía Ahorros Navideños:</label>
+                <input type="number" step="0.001" id="campo1-7" name="campo1-7" oninput="Calcular()"required>
+            </div>
+        
+                <p id="campo1-8"></p>
+            
+        </div>
+         <div class="form-container">
+           <button onclick="limpiarCampos()">Limpiar Campos</button>
+        </div>
+    </div>
+
+    <!-- Tarjeta 2 -->
+
+            <div class="contenedor-card-1">
+            <div class="card">
+                <h2>Tasa Anual</h2>
+                <div class="input-group">
+                    <label for="campo7-1">Garantía aportaciones:</label>
+                    <input type="number" step="0.001" id="campo7-1" name="garantia_aportaciones_2" oninput="Calcular()" required>
+                </div>
+                <div class="input-group">
+                    <label for="campo7-2">Garantía de certificado 1:</label>
+                    <input type="number" step="0.001" id="campo7-2" name="garantia_certificado_1_2" oninput="Calcular()" required>
+                </div>
+                <div class="input-group">
+                    <label for="campo7-3">Garantía de certificado 2:</label>
+                    <input type="number" step="0.001" id="campo7-3" name="garantia_certificado_2_2" oninput="Calcular()" required>
+                </div>
+                <div class="input-group">
+                    <label for="campo7-4">Garantía de ahorros:</label>
+                    <input type="number" step="0.001" id="campo7-4" name="garantia_ahorros_2" oninput="Calcular()" required>
+                </div>
+                <div class="input-group">
+                    <label for="campo7-5">Garantía de cosecha de oro:</label>
+                    <input type="number" step="0.001" id="campo7-5" name="garantia_cosecha_oro_2" oninput="Calcular()" required>
+                </div>
+                <div class="input-group">
+                    <label for="campo7-6">Garantía ahorros vacaciones:</label>
+                    <input type="number" step="0.001" id="campo7-6" name="garantia_ahorros_vacaciones_2" oninput="Calcular()" required>
+                </div>
+                <div class="input-group">
+                    <label for="campo7-7">Garantía ahorros navideños:</label>
+                    <input type="number" step="0.001" id="campo7-7" name="garantia_ahorros_navidenos_2" oninput="Calcular()" required>
+                </div>
+            </div>
+        </div>
+
+       <!-- Tarjeta 3-->
+
+
+    <div class="contenedor-card-2">
+        <div class="card">
+            <h2>Calculo de Tasa Combinada</h2>
+            <div class="input-group">
+                <label for="campo2-1">Aportaciones</label>
+                <input type="text" step="0.001" id="campo2-1" name="campo2-1" readonly>
+            </div>
+            <div class="input-group">
+                <label for="campo2-2">Certificado 1</label>
+                <input type="text" step="0.001" id="campo2-2" name="campo2-2" oninput="Calcular()"readonly>
+            </div>
+            <div class="input-group">
+                <label for="campo2-3">Certificado 2</label>
+                <input type="text" step="0.001" id="campo2-3" name="campo2-3" oninput="Calcular()"readonly>
+            </div>
+            <div class="input-group">
+                <label for="campo2-4">Ahorros</label>
+                <input type="text" step="0.001" id="campo2-4" name="campo2-4" oninput="Calcular()"readonly>
+            </div>
+            <div class="input-group">
+                <label for="campo2-5">Garantía de Cosecha de Oro</label>
+                <input type="text" step="0.001" id="campo2-5" name="campo2-5" oninput="Calcular()"readonly>
+            </div>
+            <div class="input-group">
+                <label for="campo2-6">Ahorros Vacaciones</label>
+                <input type="text" step="0.001" id="campo2-6" name="campo2-6" oninput="Calcular()"readonly>
+            </div>
+            <div class="input-group">
+                <label for="campo2-7">Ahorros Navideños</label>
+                <input type="text" step="0.001" id="campo2-7" name="campo2-7" oninput="Calcular()"readonly>
+            </div>
+        </div>
+    </div>
+     
+ <!-- Tarjeta 4 -->
+        <div class="contenedor-card-1">
+            <div class="card">
+                <h2>Tasa combinada anual</h2>
+                <div class="input-group">
+                    <label for="campo8-1">Aportaciones:</label>
+                    <input type="text" step="0.001" id="campo8-1" name="aportaciones_combinadas" oninput="Calcular()" readonly>
+                </div>
+                <div class="input-group">
+                    <label for="campo8-2">Certificado 1:</label>
+                    <input type="text" step="0.001" id="campo8-2" name="certificado_1_combinado" oninput="Calcular()" readonly>
+                </div>
+                <div class="input-group">
+                    <label for="campo8-3">Certificado 2:</label>
+                    <input type="text" step="0.001" id="campo8-3" name="certificado_2_combinado" oninput="Calcular()" readonly>
+                </div>
+                <div class="input-group">
+                    <label for="campo8-4">Ahorros:</label>
+                    <input type="text" step="0.001" id="campo8-4" name="ahorros_combinados" oninput="Calcular()" readonly>
+                </div>
+                <div class="input-group">
+                    <label for="campo8-5">Cosecha de oro:</label>
+                    <input type="text" step="0.001" id="campo8-5" name="cosecha_oro_combinada" oninput="Calcular()" readonly>
+                </div>
+                <div class="input-group">
+                    <label for="campo8-6">Ahorros vacaciones:</label>
+                    <input type="text" step="0.001" id="campo8-6" name="ahorros_vacaciones_combinados" oninput="Calcular()" readonly>
+                </div>
+                <div class="input-group">
+                    <label for="campo8-7">Ahorros navideños:</label>
+                    <input type="text" step="0.001" id="campo8-7" name="ahorros_navidenos_combinados" oninput="Calcular()" readonly>
+                </div>
+                <p id="campo8-8"></p>
+            </div>
+        </div>
+    </div>
+
+
+<div class="contenedor-card">
+    <!-- Tarjeta 5-->
+    <div class="contenedor-card-3">
+        <div class="card">
+            <h2>Monto a Pignorar</h2>
+            <div class="input-group">
+                <label for="campo3-1">Aportaciones</label>
+                <input type="number" step="0.001" id="campo3-1" name="campo3-2" placeholder="" oninput="calcularTotal()"required>
+            </div>
+            <div class="input-group">
+                <label for="campo3-2">Certificado 1</label>
+                <input type="number" step="0.001" id="campo3-2" name="campo3-2" oninput="calcularTotal()"required>
+            </div>
+            <div class="input-group">
+                <label for="campo3-3">Certificado 2</label>
+                <input type="number" step="0.001" id="campo3-3" name="campo3-2" oninput="calcularTotal()"required>
+            </div>
+            <div class="input-group">
+                <label for="campo3-4">Ahorros</label>
+                <input type="number" step="0.001" id="campo3-4" name="campo3-2" oninput="calcularTotal()"required>
+            </div>
+            <div class="input-group">
+                <label for="campo3-5">Cosecha de Oro</label>
+                <input type="number" step="0.001" id="campo3-5" name="campo3-2" oninput="calcularTotal()"required>
+
+            </div>
+            <div class="input-group">
+                <label for="campo3-6">Ahorros Vacaciones</label>
+               <input type="number" step="0.001" id="campo3-6" name="campo3-2" oninput="calcularTotal()"required>
+            </div>
+            <div class="input-group">
+                <label for="campo3-7">Ahorros Navideños</label>
+                <input type="number" step="0.001" id="campo3-7" name="campo3-2" oninput="calcularTotal()"required>
+            </div>
+            <p id="campo3-8" > Total:</p>
+        </div>
+        <div class="form-container">
+           <button onclick="limpiarCampos2()">Limpiar Campos</button>
+        </div>
+    </div>
+
+  <!-- Tarjeta 6 -->
+
+<div class="contenedor-card-1">
+    <div class="card">
+        <h2>Plazos fijos a combinar </h2>
+        <div class="input-group">
+            <label for="campo4-1">Garantía Certificado 1</label>
+            <input type="number" step="0.001" id="campo4-1" name="campo4-1" oninput="Plazo_fijos_a_combinar ()"required>
+        </div>
+        <div class="input-group">
+            <label for="campo4-2">Garantía Certificado 2</label>
+            <input type="number" step="0.001" id="campo4-2" name="campo4-2" oninput="Plazo_fijos_a_combinar()"required>
+        </div>
+        <div class="input-group">
+            <label for="campo4-3">Garantía Certificado 3</label>
+            <input type="number" step="0.001" id="campo4-3" name="campo4-3" oninput="Plazo_fijos_a_combinar()"required>
+        </div>
+        <div class="input-group">
+            <label for="campo4-4">Garantía Certificado 4</label>
+            <input type="number" step="0.001" id="campo4-4" name="campo4-4" oninput="Plazo_fijos_a_combinar()"required>
+        </div>
+        <div class="input-group">
+            <label for="campo4-5">Garantía Certificado 5</label>
+            <input type="number" step="0.001" id="campo4-5" name="campo4-5" oninput="Plazo_fijos_a_combinar()"required>
+        </div>
+        <p id="campo4-8"></p>
+    </div>
+    <div class="form-container">
+           <button onclick="limpiarCampos3() ">Limpiar Campos</button>
+   </div>
+</div>
+
+<!-- Tarjeta 10 -->
+      <div class="contenedor-card-5">
+        <div class="card">
+            <h2>Tasa Anual</h2>
+            <div class="input-group">
+                <label for="campo10-1">Tasa Garantia Certificado 1</label>
+                <input type="number" step="0.001" id="campo10-1" name="campo10-2" oninput="Plazo_fijos_a_combinar()">
+            </div>
+            <div class="input-group">
+                <label for="campo10-2">Tasa Garantia Certificado 2</label>
+                <input type="number"  step="0.001" id="campo10-2" name="campo10-2" oninput="Plazo_fijos_a_combinar()">
+            </div>
+            <div class="input-group">
+                <label for="campo10-3">Tasa Garantia Certificado 3</label>
+                <input type="number" step="0.001" id="campo10-3" name="campo10-2" oninput="Plazo_fijos_a_combinar()">
+            </div>
+            <div class="input-group">
+                <label for="campo10-4">Tasa Garantia Certificado 4</label>
+                <input type="number" step="0.001" id="campo10-4" name="campo10-2" oninput="Plazo_fijos_a_combinar()">
+            </div>
+            <div class="input-group">
+                <label for="campo10-5">Tasa Garantia Certificado 5</label>
+             <input type="number" step="0.001" id="campo10-5" name="campo10-2" oninput="Plazo_fijos_a_combinar()">
+            </div>
+        </div>
+    </div>
+
+  <!-- Tarjeta 7 -->
+    <div class="contenedor-card-5">
+        <div class="card">
+            <h2>Tasa de Certificados Combinadas</h2>
+            <div class="input-group">
+                <label for="campo5-1">Certificado 1</label>
+                <input type="text" step="0.001" id="campo5-1" name="campo5-2" oninput="Plazo_fijos_a_combinar()"readonly>
+            </div>
+            <div class="input-group">
+                <label for="campo5-2">Certificado 2</label>
+                <input type="text" step="0.001" id="campo5-2" name="campo5-2" oninput="Plazo_fijos_a_combinar()"readonly>
+            </div>
+            <div class="input-group">
+                <label for="campo5-3">Certificado 3</label>
+                <input type="text" step="0.001" id="campo5-3" name="campo5-2" oninput="Plazo_fijos_a_combinar()"readonly>
+            </div>
+            <div class="input-group">
+                <label for="campo5-4">Certificado 4</label>
+                <input type="text" step="0.001" id="campo5-4" name="campo5-2" oninput="Plazo_fijos_a_combinar()"readonly>
+            </div>
+            <div class="input-group">
+                <label for="campo5-5">Certificado 5</label>
+             <input type="text" step="0.001" id="campo5-5" name="campo5-2" oninput="Plazo_fijos_a_combinar()"readonly>
+            </div>
+      
+            <div class="input-group">
+                <label for="campo5-8">Tasa de Préstamo</label>
+                <input class="input-group-total" type="text" step="0.001" id="campo5-8" name="campo5-8" readonly>
+            </div>
+        </div>
+    </div>
+     <!-- Tarjeta 9 -->
+      <div class="contenedor-card-5">
+        <div class="card">
+            <h2>Tasa de Certificados Anual</h2>
+            <div class="input-group">
+                <label for="campo9-1">Certificado 1</label>
+                <input type="text" step="0.001" id="campo9-1" name="campo9-2" oninput="Plazo_fijos_a_combinar()"readonly>
+            </div>
+            <div class="input-group">
+                <label for="campo9-2">Certificado 2</label>
+                <input type="text" step="0.001" id="campo9-2" name="campo9-2" oninput="Plazo_fijos_a_combinar()"readonly>
+            </div>
+            <div class="input-group">
+                <label for="campo9-3">Certificado 3</label>
+                <input type="text" step="0.001" id="campo9-3" name="campo9-2" oninput="Plazo_fijos_a_combinar()"readonly>
+            </div>
+            <div class="input-group">
+                <label for="campo9-4">Certificado 4</label>
+                <input type="text" step="0.001" id="campo9-4" name="campo9-2" oninput="Plazo_fijos_a_combinar()"readonly>
+            </div>
+            <div class="input-group">
+                <label for="campo9-5">Certificado 5</label>
+             <input type="text" step="0.001" id="campo9-5" name="campo9-2" oninput="Plazo_fijos_a_combinar()"readonly>
+            </div>
+        </div>
+    </div>
+</div>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Cooperativa San Jose | Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+
+
+</html>
