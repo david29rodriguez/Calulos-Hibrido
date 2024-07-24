@@ -26,40 +26,46 @@
     </header>
 
 <div class="contenedor-card">
+    <!-- Tarjeta 5-->
+    <div class="contenedor-card-3">
+        <div class="card">
+            <h2>Monto a Pignorar</h2>
+            <div class="input-group">
+                <label for="campo3-1">Aportaciones</label>
+                <input type="number" step="0.001" id="campo3-1" name="campo3-2" placeholder="" oninput="calcularTotal()"required>
+            </div>
+            <div class="input-group">
+                <label for="campo3-2">Certificado 1</label>
+                <input type="number" step="0.001" id="campo3-2" name="campo3-2" oninput="calcularTotal()"required>
+            </div>
+            <div class="input-group">
+                <label for="campo3-3">Certificado 2</label>
+                <input type="number" step="0.001" id="campo3-3" name="campo3-2" oninput="calcularTotal()"required>
+            </div>
+            <div class="input-group">
+                <label for="campo3-4">Ahorros</label>
+                <input type="number" step="0.001" id="campo3-4" name="campo3-2" oninput="calcularTotal()"required>
+            </div>
+            <div class="input-group">
+                <label for="campo3-5">Cosecha de Oro</label>
+                <input type="number" step="0.001" id="campo3-5" name="campo3-2" oninput="calcularTotal()"required>
 
-  
-<div class="contenedor-card-1">
-    <div class="card">
-        <h2>Plazos fijos a combinar </h2>
-        <div class="input-group">
-            <label for="campo4-1">Garantía Certificado 1</label>
-            <input type="number" step="0.001" id="campo4-1" name="campo4-1" oninput="Plazo_fijos_a_combinar ()"required>
+            </div>
+            <div class="input-group">
+                <label for="campo3-6">Ahorros Vacaciones</label>
+               <input type="number" step="0.001" id="campo3-6" name="campo3-2" oninput="calcularTotal()"required>
+            </div>
+            <div class="input-group">
+                <label for="campo3-7">Ahorros Navideños</label>
+                <input type="number" step="0.001" id="campo3-7" name="campo3-2" oninput="calcularTotal()"required>
+            </div>
+            <p id="campo3-8" > Total:</p>
         </div>
-        <div class="input-group">
-            <label for="campo4-2">Garantía Certificado 2</label>
-            <input type="number" step="0.001" id="campo4-2" name="campo4-2" oninput="Plazo_fijos_a_combinar()"required>
-        </div>
-        <div class="input-group">
-            <label for="campo4-3">Garantía Certificado 3</label>
-            <input type="number" step="0.001" id="campo4-3" name="campo4-3" oninput="Plazo_fijos_a_combinar()"required>
-        </div>
-        <div class="input-group">
-            <label for="campo4-4">Garantía Certificado 4</label>
-            <input type="number" step="0.001" id="campo4-4" name="campo4-4" oninput="Plazo_fijos_a_combinar()"required>
-        </div>
-        <div class="input-group">
-            <label for="campo4-5">Garantía Certificado 5</label>
-            <input type="number" step="0.001" id="campo4-5" name="campo4-5" oninput="Plazo_fijos_a_combinar()"required>
-        </div>
-        <div class="input-group">
-            <label for="campo4-8">Monto del Préstamo</label>
-            <input  class="input-group-total" type="text" id="campo4-8" name="campo4-8" readonly>
+        <div class="form-container">
+           <button onclick="limpiarCampos2()">Limpiar Campos</button>
         </div>
     </div>
-    <div class="form-container">
-           <button onclick="limpiarCampos3() ">Limpiar Campos</button>
-   </div>
-</div>
+
 
 <!-- Tarjeta 10 -->
       <div class="contenedor-card-5">
